@@ -18,13 +18,13 @@ namespace Led_Api.Controllers
         public async Task Blink()
         {
 
-            int yellow = 21;
+            int ledPin = 21;
             using (GpioController controller = new GpioController())
             {
-                controller.OpenPin(yellow, PinMode.Output);
-                controller.Write(yellow, PinValue.High);
+                controller.OpenPin(ledPin, PinMode.Output);
+                controller.Write(ledPin, PinValue.High);
                 await Task.Delay(3000);
-                controller.Write(yellow, PinValue.Low);
+                controller.Write(ledPin, PinValue.Low);
 
             }
 
@@ -36,11 +36,11 @@ namespace Led_Api.Controllers
         [HttpGet("on")]
         public void LedOn()
         {
-            int yellow = 21;
+            int ledPin = 21;
             GpioController controller = new GpioController();
 
-            controller.OpenPin(yellow, PinMode.Output);
-            controller.Write(yellow, PinValue.High);
+            controller.OpenPin(ledPin, PinMode.Output);
+            controller.Write(ledPin, PinValue.High);
 
 
         }
@@ -50,12 +50,12 @@ namespace Led_Api.Controllers
         public void LedOff()
         {
 
-            int yellow = 21;
+            int ledPin = 21;
             GpioController controller = new GpioController();
 
-            controller.OpenPin(yellow, PinMode.Output);
+            controller.OpenPin(ledPin, PinMode.Output);
 
-            controller.Write(yellow, PinValue.Low);
+            controller.Write(ledPin, PinValue.Low);
 
 
 

@@ -41,7 +41,7 @@ namespace Led_Api
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+          //  app.UseHttpsRedirection();
             app.UseMvc();
         }
     }

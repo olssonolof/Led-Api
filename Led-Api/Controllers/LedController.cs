@@ -38,11 +38,11 @@ namespace Led_Api.Controllers
         {
             int yellow = 21;
             GpioController controller = new GpioController();
-            
-                controller.OpenPin(yellow, PinMode.Output);
-                controller.Write(yellow, PinValue.High);
 
-            
+            controller.OpenPin(yellow, PinMode.Output);
+            controller.Write(yellow, PinValue.High);
+
+
         }
 
         // POST: api/off
@@ -52,12 +52,12 @@ namespace Led_Api.Controllers
 
             int yellow = 21;
             GpioController controller = new GpioController();
-            
-                controller.OpenPin(yellow, PinMode.Output);
-              
-                controller.Write(yellow, PinValue.Low);
 
-            
+            controller.OpenPin(yellow, PinMode.Output);
+
+            controller.Write(yellow, PinValue.Low);
+
+
 
 
         }

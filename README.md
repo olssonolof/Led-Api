@@ -34,3 +34,5 @@ The Api has three endpoints.
 /led/on - turn the led on.
 
 /led/off - turn the led off.
+
+#### To exit the program push Ctrl + c in the terminal program.
